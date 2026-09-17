@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formation de Nathan Livingstone : BUT Techniques de Commercialisation, parcours Marketing Digital, E-business & Entrepreneuriat, IUT de Toulon. Résumé des 3 années, des enseignements et des stages.">
+  <meta name="author" content="Nathan Livingstone">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Formation — Nathan Livingstone">
+  <meta property="og:description" content="BUT Techniques de Commercialisation, parcours Marketing Digital, E-business & Entrepreneuriat — IUT de Toulon, 2023-2026.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <title>Formation — BUT TC MDEE | Nathan Livingstone</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Year cards — glass ── */
+    .year-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-bottom:1rem}
+    .yc{
+      background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.34));
+      backdrop-filter:blur(20px) saturate(1.9);-webkit-backdrop-filter:blur(20px) saturate(1.9);
+      border-radius:var(--radius-xl);padding:2.4rem 2rem;border:1px solid rgba(255,255,255,.65);
+      position:relative;overflow:hidden;transition:var(--transition-slow);will-change:transform;
+      box-shadow:0 8px 32px rgba(21,22,44,.08),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(255,255,255,.15);
+    }
+    .yc::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);pointer-events:none}
+    .yc:hover{box-shadow:0 18px 46px rgba(21,22,44,.14),inset 0 1px 0 rgba(255,255,255,.8);transform:translateY(-6px)}
+    .yc-bg-num{font-family:var(--font-display);font-size:5.5rem;font-weight:700;color:rgba(79,70,229,.08);line-height:1;position:absolute;top:.8rem;right:1.3rem;pointer-events:none;user-select:none}
+    .yc-badge{display:inline-block;padding:.3rem .9rem;background:var(--indigo-100);color:var(--indigo);font-size:.7rem;font-weight:700;border-radius:50px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:1.3rem;position:relative}
+    .yc-title{font-family:var(--font-display);font-size:1.7rem;font-weight:700;color:var(--ink);margin-bottom:.25rem;position:relative}
+    .yc-sub{font-size:.83rem;color:var(--coral-600);font-weight:600;margin-bottom:1.3rem;position:relative}
+    .yc-ues{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;position:relative}
+    .yc-ue{padding:.22rem .7rem;background:var(--bg-soft);border:1px solid var(--border);color:var(--ink-soft);font-size:.66rem;font-weight:700;border-radius:50px;letter-spacing:.02em;text-transform:uppercase}
+    .yc-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.2rem;position:relative}
+    .yc-stage{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .9rem .3rem .7rem;background:var(--coral-50);color:var(--coral-600);font-size:.7rem;font-weight:700;border-radius:50px;position:relative}
+    .yc-stage::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--coral);flex-shrink:0}
+    @media(max-width:900px){.year-cards{grid-template-columns:1fr}}
+
+    /* ── Stage summary cards ── */
+    .stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:1rem}
+    .stage-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem 2.2rem;border:1px solid var(--border);border-left:3px solid var(--indigo);box-shadow:var(--shadow-sm)}
+    .stage-card-eyebrow{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--indigo);margin-bottom:.5rem}
+    .stage-card h3{font-size:1.15rem;margin-bottom:.3rem}
+    .stage-card-sub{font-size:.8rem;color:var(--coral-600);font-weight:600;margin-bottom:1rem}
+    .stage-card p{font-size:.87rem;color:var(--ink-soft);line-height:1.75;margin:0}
+    @media(max-width:800px){.stage-grid{grid-template-columns:1fr}}
+
+    /* ── Synthèse ── */
+    .synth-card{background:linear-gradient(135deg,var(--indigo-50) 0%,var(--coral-50) 100%);border-radius:var(--radius-lg);padding:2.2rem 2.4rem;border:1px solid rgba(255,255,255,.6);margin-top:1rem}
+    .synth-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.85;margin:0}
+  </style>
+</head>
+<body>
+
+  <section class="subpage-hero">
+    <div class="subpage-hero-inner">
+      <div class="subpage-hero-meta">
+        <span>/ Formation</span>
+        <span class="subpage-hero-meta-line" aria-hidden="true"></span>
+        <span>IUT de Toulon · 2023 — 2026</span>
+      </div>
+      <h1>Ma <em>formation</em></h1>
+      <p class="subpage-hero-tagline">BUT Techniques de Commercialisation, parcours Marketing Digital, E-business &amp; Entrepreneuriat — trois années à l'IUT de Toulon qui ont construit ma vision complète du cycle commercial.</p>
+      <a href="profil.html" class="subpage-hero-back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Retour au profil
+      </a>
+    </div>
+  </section>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Accueil</a><span class="separator">›</span>
+    <a href="profil.html">Profil</a><span class="separator">›</span>
+    <span>Formation</span>
+  </div>
+
+  <section class="section">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Le programme</span>
+      <h2>Trois années, une trajectoire</h2>
+      <p>Le BUT Techniques de Commercialisation forme des professionnels polyvalents sur l'ensemble de la chaîne commerciale — marketing, vente, communication et digital. Le parcours <strong>MDEE</strong> (Marketing Digital, E-business &amp; Entrepreneuriat), choisi dès la deuxième année, y ajoute une spécialisation en commerce numérique et création d'activité.</p>
+    </div>
+
+    <div class="year-cards">
+
+      <div class="yc fade-in stagger-1">
+        <span class="yc-bg-num" aria-hidden="true">01</span>
+        <span class="yc-badge">Tronc commun</span>
+        <div class="yc-title">BUT 1</div>
+        <div class="yc-sub">Les fondations</div>
+        <p class="yc-desc">Bases du marketing, de la vente et de la communication commerciale : analyse de marché, argumentation de vente, plan de communication.</p>
+        <div class="yc-ues">
+          <span class="yc-ue">Marketing</span>
+          <span class="yc-ue">Vente</span>
+          <span class="yc-ue">Communication</span>
+        </div>
+        <div class="yc-stage">Stage — SEMLORE, Les Orres</div>
+      </div>
+
+      <div class="yc fade-in stagger-2">
+        <span class="yc-bg-num" aria-hidden="true">02</span>
+        <span class="yc-badge">Parcours MDEE</span>
+        <div class="yc-title">BUT 2</div>
+        <div class="yc-sub">Spécialisation</div>
+        <p class="yc-desc">Entrée dans le parcours MDEE : négociation commerciale, stratégie de communication 360°, gestion d'une activité digitale et premier projet e-business collectif.</p>
+        <div class="yc-ues">
+          <span class="yc-ue">Marketing</span>
+          <span class="yc-ue">Vente</span>
+          <span class="yc-ue">Communication</span>
+          <span class="yc-ue">Mktg digital</span>
+          <span class="yc-ue">E-business</span>
+        </div>
+        <div class="yc-stage">Stage — IUT de Toulon</div>
+      </div>
+
+      <div class="yc fade-in stagger-3">
+        <span class="yc-bg-num" aria-hidden="true">03</span>
+        <span class="yc-badge">Expertise MDEE</span>
+        <div class="yc-title">BUT 3</div>
+        <div class="yc-sub">Autonomie</div>
+        <p class="yc-desc">Niveau d'expertise : vente complexe face à des acheteurs professionnels, pilotage d'un projet e-business en autonomie, exploitation de données et veille stratégique.</p>
+        <div class="yc-ues">
+          <span class="yc-ue">Marketing</span>
+          <span class="yc-ue">Vente</span>
+          <span class="yc-ue">Mktg digital</span>
+          <span class="yc-ue">E-business</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Expérience professionnelle</span>
+      <h2>Deux stages en entreprise</h2>
+      <p>Deux immersions professionnelles qui ont mis en pratique les compétences acquises en formation.</p>
+    </div>
+
+    <div class="stage-grid">
+
+      <div class="stage-card fade-in stagger-1">
+        <div class="stage-card-eyebrow">BUT 1 · Janv. 2024</div>
+        <h3>La SEMLORE — Station des Orres</h3>
+        <div class="stage-card-sub">Stage de vente en environnement touristique de montagne</div>
+        <p>Premier stage en entreprise, au sein de la société qui gère les activités de la Station des Orres (remontées mécaniques, domaine skiable, loisirs). Mise en pratique des techniques de vente et de la relation client face à une clientèle française et internationale. Cette première immersion m'a appris le sens pratique et l'autonomie qui manquent forcément en sortie de lycée.</p>
+      </div>
+
+      <div class="stage-card fade-in stagger-2">
+        <div class="stage-card-eyebrow">BUT 2 · Avr. — Juin 2025</div>
+        <h3>IUT de Toulon — Département TC</h3>
+        <div class="stage-card-sub">Organisation de l'Assemblée des Chefs de Département TC</div>
+        <p>En équipe de 6, organisation complète d'un événement national réunissant une centaine de responsables pédagogiques : identité visuelle, supports de communication (dont un faux JT monté sur Adobe Premiere Pro), parcours de visite et logistique, pilotés via une matrice RACI. Un vrai exercice de gestion de projet où l'autonomie accordée m'a aussi appris à gérer la pression d'un projet à fort enjeu.</p>
+      </div>
+
+    </div>
+
+    <div class="synth-card fade-in stagger-3">
+      <p>Ces trois années m'ont donné une vision complète du cycle commercial — de l'analyse de marché à la négociation, en passant par la communication et le digital — et surtout la conviction que la vente et la relation client sont ce qui me correspond le mieux. C'est cette formation, complétée par ma participation aux <a href="profil.html#realisation" style="color:var(--indigo);text-decoration:none;font-weight:700">Négociales 2025</a> et mes expériences de terrain, qui a construit mon projet professionnel de commercial aujourd'hui.</p>
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+  <script>
+    createNav('formation');
+    createFooter();
+  </script>
+</body>
+</html>

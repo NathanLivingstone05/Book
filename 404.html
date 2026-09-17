@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — Nathan Livingstone</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error-wrap {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(8rem, 22vw, 16rem);
+      font-weight: 700;
+      line-height: .9;
+      letter-spacing: -.04em;
+      margin-bottom: 1.5rem;
+      color: var(--indigo-100);
+      position: relative;
+    }
+    .error-code .zero {
+      background: linear-gradient(100deg, var(--indigo) 15%, var(--coral) 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .8rem;
+      letter-spacing: -.02em;
+    }
+    .error-sub {
+      color: var(--ink-soft);
+      max-width: 420px;
+      margin: 0 auto 2.8rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .err-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .9rem 2rem;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: .85rem;
+      font-weight: 700;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .err-btn-gold {
+      background: var(--indigo);
+      color: var(--white);
+      box-shadow: var(--shadow-indigo);
+    }
+    .err-btn-gold:hover {
+      transform: translateY(-2px);
+      background: var(--indigo-700);
+      box-shadow: 0 18px 40px rgba(79,70,229,.34);
+      color: var(--white);
+    }
+    .err-btn-navy {
+      background: linear-gradient(135deg, rgba(255,255,255,.68), rgba(255,255,255,.32));
+      backdrop-filter: blur(16px) saturate(1.8); -webkit-backdrop-filter: blur(16px) saturate(1.8);
+      border: 1px solid rgba(255,255,255,.6);
+      color: var(--ink);
+      box-shadow: 0 6px 20px rgba(21,22,44,.07), inset 0 1px 0 rgba(255,255,255,.6);
+    }
+    .err-btn-navy:hover {
+      color: var(--indigo);
+      transform: translateY(-2px);
+    }
+    .error-nav-links {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-nav-links a {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--ink-faint);
+      text-decoration: none;
+      transition: color .25s;
+    }
+    .error-nav-links a:hover { color: var(--indigo); }
+  </style>
+</head>
+<body>
+
+  <div class="error-wrap">
+    <div>
+      <div class="error-code">4<span class="zero">0</span>4</div>
+      <h1 class="error-title">Page introuvable</h1>
+      <p class="error-sub">Cette page n'existe pas ou a été déplacée. Le reste du portfolio est intact.</p>
+
+      <div class="error-actions">
+        <a href="index.html" class="err-btn err-btn-gold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Retour à l'accueil
+        </a>
+        <a href="contact.html" class="err-btn err-btn-navy">
+          Me contacter
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="error-nav-links">
+        <a href="profil.html">Profil</a>
+        <a href="formation.html">Formation</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="nav.js"></script>
+  <script>
+    createNav('');
+    createFooter();
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Nathan Livingstone, diplômé BUT TC à l'IUT de Toulon. Disponible pour un poste de commercial en CDI — vente, négociation, relation client.">
+  <meta name="author" content="Nathan Livingstone">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Contact — Nathan Livingstone">
+  <meta property="og:description" content="Contactez Nathan Livingstone, diplômé BUT TC à l'IUT de Toulon. Disponible pour un poste de commercial en CDI.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <title>Contact — Nathan Livingstone | Commercial</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-group{margin-bottom:1.4rem}
+    .form-label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:.5rem;transition:color .25s var(--ease)}
+    .form-group:focus-within .form-label{color:var(--indigo)}
+    .form-input,.form-textarea{-webkit-appearance:none;appearance:none;width:100%;padding:.9rem 1.2rem;font-family:var(--font-body);font-size:1rem;color:var(--ink);background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius-md);transition:border-color .25s var(--ease),box-shadow .3s var(--ease),background .25s var(--ease);outline:none}
+    .form-input:focus,.form-textarea:focus{border-color:var(--indigo);box-shadow:0 0 0 4px rgba(79,70,229,.12);background:var(--white)}
+    .form-input:hover,.form-textarea:hover{border-color:rgba(79,70,229,.35)}
+    .form-input::placeholder,.form-textarea::placeholder{color:var(--ink-faint);opacity:.7}
+    .form-textarea{min-height:160px;resize:vertical;line-height:1.7}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .form-submit{-webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.4rem;background:var(--indigo);color:var(--white);font-family:var(--font-body);font-weight:700;font-size:.88rem;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);box-shadow:var(--shadow-indigo);margin-top:.5rem;position:relative;overflow:hidden}
+    .form-submit::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.4) 50%,transparent 80%);transition:left .9s var(--ease);pointer-events:none}
+    .form-submit:hover::before{left:100%}
+    .form-submit:hover{transform:translateY(-3px) scale(1.02);background:var(--indigo-700);box-shadow:0 18px 40px rgba(79,70,229,.34)}
+    .form-submit svg{width:16px;height:16px;transition:var(--transition)}
+    .form-submit:hover svg{transform:translateX(4px)}
+    .form-status{display:none;padding:1rem 1.4rem;border-radius:var(--radius-md);font-size:.9rem;font-weight:500;margin-top:1rem}
+    .form-status.success{display:block;background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9}
+    .form-status.error{display:block;background:#fce4ec;color:#c62828;border:1px solid #f8bbd0}
+
+    /* ── Carte coordonnées — glass claire (fini le panneau navy) ── */
+    .contact-card{
+      background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.34));
+      backdrop-filter:blur(20px) saturate(1.9);-webkit-backdrop-filter:blur(20px) saturate(1.9);
+      border-radius:var(--radius-lg);padding:2.8rem;border:1px solid rgba(255,255,255,.65);
+      position:relative;overflow:hidden;isolation:isolate;
+      box-shadow:0 8px 32px rgba(21,22,44,.08),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(255,255,255,.15);
+      transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+    }
+    .contact-card:hover{box-shadow:0 18px 46px rgba(21,22,44,.13),inset 0 1px 0 rgba(255,255,255,.8)}
+    .contact-card::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);pointer-events:none}
+    .contact-card h3{color:var(--ink);margin-bottom:.5rem;position:relative}
+    .contact-card>p{color:var(--ink-soft);font-weight:600;font-size:.95rem;margin-bottom:2rem;position:relative}
+    .contact-link-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-top:1px solid var(--border);position:relative;transition:padding-left .35s var(--ease),border-top-color .25s var(--ease)}
+    .contact-link-item:hover{padding-left:.5rem;border-top-color:rgba(79,70,229,.25)}
+    .cl-icon{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--indigo-100);display:flex;align-items:center;justify-content:center;color:var(--indigo);flex-shrink:0;transition:background .35s var(--ease),transform .35s var(--ease)}
+    .contact-link-item:hover .cl-icon{background:var(--indigo);color:var(--white);transform:scale(1.08) rotate(-3deg)}
+    .cl-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:.15rem}
+    .cl-value{font-size:.95rem;color:var(--ink)}
+    a.cl-value{color:var(--ink)}
+    a.cl-value:hover{color:var(--indigo)}
+    .availability{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);position:relative}
+    .availability-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--coral-600);margin-bottom:1rem}
+    .availability-item{display:flex;align-items:center;gap:.8rem;padding:.4rem 0;font-size:.88rem;color:var(--ink-soft)}
+    .availability-item .pulse{width:8px;height:8px;border-radius:50%;background:#4caf50;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(76,175,80,.4)}50%{box-shadow:0 0 0 6px rgba(76,175,80,0)}}
+
+    /* ── Quick actions — 3 boutons glass ── */
+    .quick-actions{margin-top:2.4rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .quick-actions-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--coral-600);margin-bottom:1rem;display:block}
+    .quick-actions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+    .quick-action{
+      display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;
+      background:linear-gradient(135deg,rgba(255,255,255,.65),rgba(255,255,255,.3));
+      backdrop-filter:blur(14px) saturate(1.8);-webkit-backdrop-filter:blur(14px) saturate(1.8);
+      border:1px solid rgba(255,255,255,.6);border-radius:var(--radius-md);
+      font-family:var(--font-body);font-size:.82rem;font-weight:700;color:var(--ink);
+      text-decoration:none;transition:var(--transition);
+      box-shadow:0 6px 20px rgba(21,22,44,.06),inset 0 1px 0 rgba(255,255,255,.6);
+    }
+    .quick-action:hover{color:var(--indigo);transform:translateY(-3px);box-shadow:0 12px 28px rgba(79,70,229,.18),inset 0 1px 0 rgba(255,255,255,.7)}
+    .quick-action svg{width:14px;height:14px;color:var(--coral);flex-shrink:0}
+    @media(max-width:768px){.form-row{grid-template-columns:1fr}.contact-card{padding:2rem}.quick-actions-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       SUBPAGE HERO — composant global éditorial
+       ═══════════════════════════════════════════ -->
+  <section class="subpage-hero">
+    <div class="subpage-hero-inner">
+      <div class="subpage-hero-meta">
+        <span>/ Prenons contact</span>
+        <span class="subpage-hero-meta-line" aria-hidden="true"></span>
+        <span>Disponible immédiatement</span>
+      </div>
+      <h1>Travaillons <em>ensemble</em></h1>
+      <p class="subpage-hero-tagline">Recrutement, opportunité, simple discussion — toute proposition mérite réflexion. Je vous réponds sous 48h.</p>
+      <a href="index.html" class="subpage-hero-back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Retour à l'accueil
+      </a>
+    </div>
+  </section>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Accueil</a>
+    <span class="separator">›</span>
+    <span>Contact</span>
+  </div>
+
+  <section class="section">
+    <div class="contact-grid">
+      
+      <!-- Formulaire -->
+      <div class="fade-in">
+        <h2 style="margin-bottom:.5rem;">Envoyez-moi un message</h2>
+        <p style="margin-bottom:2rem;color:var(--ink-soft);">Je vous répondrai dans les meilleurs délais.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/xreojjjo" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Nom complet</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Objet</label>
+            <input class="form-input" type="text" id="subject" name="subject" placeholder="Objet de votre message">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Envoyer le message
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+
+        <!-- Quick actions — accès rapide -->
+        <div class="quick-actions">
+          <span class="quick-actions-label">Ou plus rapide</span>
+          <div class="quick-actions-grid">
+            <a href="mailto:livingstonenat@gmail.com" class="quick-action">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email direct
+            </a>
+            <a href="tel:+33645207786" class="quick-action">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Téléphone
+            </a>
+            <a href="https://www.linkedin.com/in/nathan-livingstone-0997a12a3" target="_blank" rel="noopener" class="quick-action">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coordonnées -->
+      <div class="fade-in stagger-2">
+        <div class="contact-card">
+          <h3>Nathan Livingstone</h3>
+          <p>Diplômé BUT Techniques de Commercialisation — Parcours MDEE</p>
+
+          <div class="contact-link-item">
+            <div class="cl-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">Email</div>
+              <a href="mailto:livingstonenat@gmail.com" class="cl-value">livingstonenat@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="cl-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">Téléphone</div>
+              <a href="tel:+33645207786" class="cl-value">06 45 20 77 86</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="cl-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/nathan-livingstone-0997a12a3" target="_blank" class="cl-value">Nathan Livingstone</a>
+            </div>
+          </div>
+
+          <div class="contact-link-item">
+            <div class="cl-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">Localisation</div>
+              <div class="cl-value">La Garde, Var (83) — Région PACA</div>
+            </div>
+          </div>
+
+          <div class="availability">
+            <div class="availability-label">Disponibilité</div>
+            <div class="availability-item">
+              <span class="pulse"></span>
+              <span><strong style="color:var(--coral-600)">Immédiate</strong> — Disponible pour un poste de commercial</span>
+            </div>
+          </div>
+
+          <div style="margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+            <div class="availability-label">Documents</div>
+            <a href="CV-Nathan-Livingstone.pdf" download class="contact-link-item" style="text-decoration:none;margin-top:0;">
+              <div class="cl-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div>
+                <div class="cl-label">Curriculum Vitae</div>
+                <div class="cl-value" style="font-size:.85rem;">Télécharger le CV PDF</div>
+              </div>
+            </a>
+            <div class="contact-link-item" style="cursor:default;">
+              <div class="cl-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <div class="cl-label">Lettre de recommandation</div>
+                <div class="cl-value" style="font-size:.82rem;color:var(--ink-faint);">Mme Gaillard · DGFIP — disponible sur demande par email</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+  <script>
+    createNav('contact');
+    createFooter();
+
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.textContent = 'Envoi en cours…';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      status.className = 'form-status';
+      status.style.display = 'none';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          status.className = 'form-status success';
+          status.textContent = '✓ Message envoyé avec succès ! Je vous répondrai rapidement.';
+          status.style.display = 'block';
+          form.reset();
+        } else { throw new Error('Erreur'); }
+      } catch (error) {
+        status.className = 'form-status error';
+        status.textContent = '✕ Une erreur est survenue. Contactez-moi directement par email.';
+        status.style.display = 'block';
+      }
+
+      submitBtn.innerHTML = 'Envoyer le message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
