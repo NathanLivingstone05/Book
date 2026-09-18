@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# ⚠️ Remplace l'URL ci-dessous par ton URL GitHub Pages réelle
-Sitemap: https://nathan-livingstone.fr/sitemap.xml
+Sitemap: https://nathanlivingstone05.github.io/Book/sitemap.xml
